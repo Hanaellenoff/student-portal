@@ -1,4 +1,15 @@
+import React from "react";
+import { Login } from "./Login";
+import { useState } from "react";
+import { LoginModal } from "./LoginModal";
+
 export function Header() {
+  const [isLoginVisible, setIsLoginVisible] = useState(false);
+
+  const handleShowLogin = () => {
+    setIsLoginVisible(true);
+  };
+
   return (
     <header>
       <div className="navbar">
@@ -11,7 +22,7 @@ export function Header() {
             <button>Capstone</button>
           </a>
           <a href="#">
-            <button>Login</button>
+            <button onClick={handleShowLogin}>Login</button>
           </a>
           <a href="#">
             <button>Log Out</button>
