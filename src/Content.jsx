@@ -1,6 +1,11 @@
 import { ResumeModal } from "./ResumeModal";
+
 import { ResumeShow } from "./ResumeShow";
 // import { Routes, Route } from "react-router-dom";
+
+import { Login } from "./Login";
+import { LogoutLink } from "./LogoutLink";
+
 
 export function Content() {
   const resume = [
