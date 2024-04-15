@@ -1,3 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   scroll-behavior: smooth;
+  background-color: aliceblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button {
+  list-style: none;
+  display: inline-block;
+  margin: calc(1vh + 1vw);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5rem;
+  size: calc(1vh + 1vw);
+  width: calc(15vh + 15vw);
+  background-color: white;
+  font-size: calc(1vh + 1vw);
+  box-shadow: 1rem 1rem 1rem black;
+}
+
+a :hover {
+  background-color: red;
+  box-shadow: 1rem 1rem 1rem black;
+}
+
+a :active {
+  background-color: white;
+}
+
+.navbar {
+  text-align: center;
+  background-color: rgb(165, 0, 0);
+}
+
+.navbar h2 {
+  background-color: white;
+  border-radius: 0 0 10rem 10rem;
+  font-size: 2.5rem;
+  box-shadow: 1rem 1rem 1rem black;
+}
+
+.home {
+  background-color: rgba(255, 0, 0, 0.648);
+  padding: calc(1vh + 1vw);
+  margin: calc(1vh + 3vw);
+  text-align: center;
+}
+
+.home p {
+  font-size: calc(1vh + 1vw);
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4rem;
+}
+
+.home h1 {
+  background-color: white;
+  border-radius: 4rem;
+  margin: 3rem 4rem 6rem 4rem;
+  padding: calc(3vh + 2vw);
+}
+
+.loginlink {
+  background-color: rgb(254, 254, 254);
+  line-height: 2rem;
+  margin: 1rem 10rem 0 10rem;
+  border-radius: 3rem 3rem 0 0;
+  size: calc(1vh + 1vw);
+}
+
+.loginlink h1 {
+  margin: 0 1rem 1rem 1rem;
+  padding: 1rem 0 0 0;
+  font-size: 2.5rem;
+  text-decoration: underline;
 }
