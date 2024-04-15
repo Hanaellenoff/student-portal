@@ -1,4 +1,6 @@
 import { ResumeModal } from "./ResumeModal";
+import { ResumeShow } from "./ResumeShow";
+// import { Routes, Route } from "react-router-dom";
 
 export function Content() {
   const resume = [
@@ -13,9 +15,8 @@ export function Content() {
   ];
   return (
     <div>
-      <ResumeModal show={true}>
-        <h1>test</h1>
-      </ResumeModal>
+      <ResumeShow resume={resume} />
+      <ResumeModal></ResumeModal>
     </div>
   );
 }
