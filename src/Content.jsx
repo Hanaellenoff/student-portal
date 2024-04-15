@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { ResumeModal } from "./ResumeModal";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
