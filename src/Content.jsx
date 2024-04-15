@@ -1,4 +1,6 @@
 import { ResumeModal } from "./ResumeModal";
+import { Login } from "./Login";
+import { LogoutLink } from "./LogoutLink";
 
 export function Content() {
   const resume = [
