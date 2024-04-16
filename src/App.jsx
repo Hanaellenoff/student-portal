@@ -1,8 +1,7 @@
 import "./App.css";
-import { Header } from "./Header";
-import { Footer } from "./Footer";
-import { Content } from "./Content";
-import { Home } from "./Home";
+// import { Header } from "./Header";
+// import { Footer } from "./Footer";
+// import { Content } from "./Content";
 
 function App() {
   const resume = {
