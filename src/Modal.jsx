@@ -1,13 +1,13 @@
-import "./ResumeModal.css";
+import "./Modal.css";
 
-export function ResumeModal(props) {
+export function Modal(props) {
   if (props.show) {
     return (
       <div className="modal-background">
         <section className="modal-main">
           {props.children}
           <button className="close" type="button" onClick={props.onClose}>
-            More Info
+            &#x2715;
           </button>
         </section>
       </div>
