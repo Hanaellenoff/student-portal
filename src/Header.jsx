@@ -7,12 +7,10 @@ export function Header() {
   return (
     <header>
       <div className="navbar">
-        <h2>Student Portal</h2>
+        <h1>Student Portal</h1>
         <nav>
           <button>Resume</button>
-          <button>
-            <Link to="/capstone">Capstone</Link>
-          </button>
+          <button>Capstone</button>
           <button>Log Out</button>
           <div className="loginlink">
             <Login />

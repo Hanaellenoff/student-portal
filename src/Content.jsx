@@ -1,14 +1,15 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { ResumeModal } from "./ResumeModal";
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
 import { ResumeShow } from "./ResumeShow";
-
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
 import Capstone from "./Capstone";
 
-export default function Content() {
+export function Content() {
+  const [isResumeShowVisable, setIsResumeShowVisable] = useState(false);
+  const [currentResume, setCurrentResume] = useState({});
   const resume = [
     {
       id: 1,
@@ -19,13 +20,19 @@ export default function Content() {
       link: "amazon.com",
     },
   ];
+  const handleShowResume = () => {
+    console.log("handleshowresume");
+    setIsResumeShowVisable(true);
+    setCurrentResume(resume);
+  };
+
+  const handleClose = () => {};
   return (
     <div>
-      <Routes>
-        <Route path="/capstone" element={<Capstone />} />
+      {/* <ResumeShow resume={resume} />
+        <Route path="/resume" element={<ResumeShow resume={resume} onShowResume={handleShowResume} />} />
       </Routes>
-      <ResumeShow resume={resume} />
-      <ResumeModal></ResumeModal>
+      <ResumeModal></ResumeModal> */}
     </div>
   );
 }
