@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Content } from "./Content";
 import { Home } from "./Home";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Home />
       <Content />
       <Footer />
+      <BrowserRouter />
     </div>
   );
 }
