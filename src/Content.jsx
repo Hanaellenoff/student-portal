@@ -26,13 +26,21 @@ export function Content() {
     setCurrentResume(resume);
   };
 
-  const handleClose = () => {};
+  const handleClose = () => {
+    setIsResumeShowVisable(false);
+  };
+
   return (
     <div>
+<<<<<<< HEAD
       {/* <ResumeShow resume={resume} />
         <Route path="/resume" element={<ResumeShow resume={resume} onShowResume={handleShowResume} />} />
       </Routes>
       <ResumeModal></ResumeModal> */}
+=======
+      <ResumeShow resume={resume} onShowResume={handleShowResume} />
+      <ResumeModal show={isResumeShowVisable} onClose={handleClose}></ResumeModal>
+>>>>>>> 0e6f9b106409d1f7b078add6fa4999136253ff48
     </div>
   );
 }
