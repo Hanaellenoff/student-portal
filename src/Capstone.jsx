@@ -1,17 +1,15 @@
-export default function Capstone() {
-  const capstone = {
-    linkedin_url: "linkedin.url",
-    twitter_handle: "twitter.url",
-    github_url: "github.url",
-  };
-
+export default function Capstone(props) {
+  console.log(props);
   return (
     <div>
       <h1>Capstone</h1>
-      <p>{capstone.linkedin_url}</p>
-      <p>{capstone.twitter_handle}</p>
-      <p>{capstone.github_url}</p>
+
       <button>Update Capstone</button>
+
+      <p>{props.capstone.name}</p>
+      <p>{props.capstone.description}</p>
+      <p>{props.capstone.url}</p>
+      <p>{props.capstone.screenshot}</p>
     </div>
   );
 }
