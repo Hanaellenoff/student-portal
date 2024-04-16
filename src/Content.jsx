@@ -25,13 +25,14 @@ export function Content() {
     setCurrentResume(resume);
   };
 
-  const handleClose = () => {};
+  const handleClose = () => {
+    setIsResumeShowVisable(false);
+  };
+
   return (
     <div>
-      <Routes>
-        <Route path="/resume" element={<ResumeShow resume={resume} onShowResume={handleShowResume} />} />
-      </Routes>
-      <ResumeModal></ResumeModal>
+      <ResumeShow resume={resume} onShowResume={handleShowResume} />
+      <ResumeModal show={isResumeShowVisable} onClose={handleClose}></ResumeModal>
     </div>
   );
 }
