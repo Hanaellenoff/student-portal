@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import { useState } from "react";
 import { Login } from "./Login";
@@ -8,15 +9,11 @@ export function Header() {
       <div className="navbar">
         <h2>Student Portal</h2>
         <nav>
-          <a href="#">
-            <button>Resume</button>
-          </a>
-          <a href="#">
-            <button>Capstone</button>
-          </a>
-          <a href="#">
-            <button>Log Out</button>
-          </a>
+          <button>Resume</button>
+          <button>
+            <Link to="/capstone">Capstone</Link>
+          </button>
+          <button>Log Out</button>
           <div className="loginlink">
             <Login />
           </div>
