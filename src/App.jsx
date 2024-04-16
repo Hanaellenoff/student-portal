@@ -7,10 +7,14 @@ import { Login } from "./Login";
 // import User from "./User";
 import { Modal } from "./Modal";
 import ResumeIndex from "./ResumeIndex";
+import CapstoneIndex from "./CapstoneIndex";
 
 function App() {
   const [isResumeShowVisable, setIsResumeShowVisable] = useState(false);
   const [currentResume, setCurrentResume] = useState({});
+  const [IsCapstoneShowVisable, setIsCapstoneShowVisable] = useState(false);
+  const [currentCapstone, setCurrentCapstone] = useState({});
+
   const resume = {
     first_name: "Zach",
     last_name: "Engel",
@@ -47,13 +51,26 @@ function App() {
     setIsResumeShowVisable(false);
   };
 
+  const handleShowCapstone = (capstone) => {
+    console.log("handleShowCapstone", capstone);
+    setIsCapstoneShowVisable(true);
+    setCurrentCapstone(capstone);
+  };
+  const handleCloseCapstone = () => {
+    console.log("handleClose");
+    setIsCapstoneShowVisable(false);
+  };
+
   // useEffect;
   return (
     <div>
       <Login />
       <User user={user} />
-      <Capstone capstone={capstone} />
+      <CapstoneIndex capstone={capstone} onShowCapstone={handleShowCapstone} />
       <ResumeIndex resume={resume} onShowResume={handleShowResume} />
+      <Modal show={IsCapstoneShowVisable} onShowCapstone={handleShowCapstone} onClose={handleCloseCapstone}>
+        <Capstone capstone={capstone} />
+      </Modal>
       <Modal show={isResumeShowVisable} onShowResume={handleShowResume} onClose={handleClose}>
         <Resume resume={currentResume} />
       </Modal>
