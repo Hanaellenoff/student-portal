@@ -63,7 +63,7 @@ function App() {
 
   // useEffect;
   return (
-    <div>
+    <div className="home">
       <Login />
       <User user={user} />
       <CapstoneIndex capstone={capstone} onShowCapstone={handleShowCapstone} />
