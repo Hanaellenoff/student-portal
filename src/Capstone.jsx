@@ -11,6 +11,7 @@ export default function Capstone() {
       <p>{capstone.linkedin_url}</p>
       <p>{capstone.twitter_handle}</p>
       <p>{capstone.github_url}</p>
+      <button>Update Capstone</button>
     </div>
   );
 }

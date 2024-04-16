@@ -1,4 +1,4 @@
-export default function Resume(props) {
+export default function ResumeIndex(props) {
   console.log(props);
   return (
     <div>
@@ -6,7 +6,7 @@ export default function Resume(props) {
       <p>{props.resume.first_name}</p>
       <p>{props.resume.email}</p>
       <p>{props.resume.linkedin_url}</p>
-      <button>Update Resume</button>
+      <button onClick={() => props.onShowResume(props.resume)}>More Info</button>
     </div>
   );
 }
